@@ -1,13 +1,17 @@
 $(document).ready(function(){
   console.log('jQuery loaded');
+  $('.list-display-field').html('');
+  localStorage.clear();
+  console.log(localStorage.length)
 
   // write to local storage from input when button save clicked
   $('.btn-submit').on('click', function(){
     // localStorage.setItem('inputFieldValue', $('.text-entry').val());
     // var myItemInStorage = localStorage.getItem('inputFieldValue');
-    if(localStorage.length === undefined){
+    if(localStorage.length === 0){
   localStorage.setItem('inputFieldValue', $('.text-entry').val());
-} else{ localStorage['inputFieldValue'] = [localStorage['inputFieldValue']].concat($('.text-entry').val());
+  var myItemInStorage = localStorage.getItem('inputFieldValue');
+} else{ localStorage['inputFieldValue'] += ($('.text-entry').val());
 
     var myItemInStorage = localStorage.getItem('inputFieldValue');
 }
@@ -15,8 +19,8 @@ $(document).ready(function(){
     console.log('myItemInStorage', myItemInStorage);
 
     // display the value here
-    $('.list-display-field').text(myItemInStorage.slice(9)); // ??
-
+    $('.list-display-field').text(myItemInStorage); // ??
+console.log(typeof localStorage)
   });
 
   // delete from local storage when delete button clicked
