@@ -6,24 +6,19 @@ $(document).ready(function(){
   
 
   // write to local storage from input when button save clicked
+  //save in array to access all inputs
   $('.btn-submit').on('click', function(){
-    // localStorage.setItem('inputFieldValue', $('.text-entry').val());
-    // var myItemInStorage = localStorage.getItem('inputFieldValue');
     
   storageArray.push($('.text-entry').val())
-  localStorage.setItem('inputFieldValue', storageArray);
-  
-  
-  var myItemInStorage = localStorage.getItem('inputFieldValue');
-  //storageArray.push(myItemInStorage);
-
-  console.log('myItemInStorage', storageArray);
-
-    
-    $('.list-display-field').text(storageArray); // ??
-
+  localStorage.setItem('inputFieldValue', storageArray)
+  $('.list-display-field').text(storageArray); // ??
+    console.log(storageArray)
   });
-
+  //button to undo previous input
+  $(".btn-undo").on('click', function(){
+    storageArray = storageArray.splice(0, storageArray.length-1);
+    localStorage.setItem('inputFieldValue', storageArray)
+  })
   // delete from local storage when delete button clicked
   $('.btn-delete').on('click', function(){
     $('.list-display-field').html('');
