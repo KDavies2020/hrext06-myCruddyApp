@@ -3,16 +3,19 @@ $(document).ready(function(){
   localStorage.clear();
   var storageArray = [];
 
-  
+
 
   // write to local storage from input when button save clicked
   //save in array to access all inputs
   $('.btn-submit').on('click', function(){
-    
+
   storageArray.push($('.text-entry').val())
   localStorage.setItem('inputFieldValue', storageArray)
-  $('.list-display-field').text(storageArray); // ??
-    console.log(storageArray)
+  $('.list-display-field').text(storageArray);
+  $('.text-entry').val('Is this working')
+  //line above will be used to clear out previous search and add new placeholder with instructions for next user input.
+  console.log(event)
+
   });
   //button to undo previous input
   $(".btn-undo").on('click', function(){
