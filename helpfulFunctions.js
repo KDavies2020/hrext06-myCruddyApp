@@ -22,10 +22,8 @@ var scheduler = function(array){
 // upon clicked submit game - we need to pass our storageArray into scheduler function.
 
 // second function that will change our placeholder / input value to the element of our placeholderValueQuestions array.
-
-var createInputPropmts = function(array){
-  index = 0;
-  return array[index];
-  index++
-
+var i = -1;
+var createInputPrompts = function(array){
+  i++;
+  return array[i];
 }

@@ -2,6 +2,7 @@ $(document).ready(function(){
   console.log('jQuery loaded');
   localStorage.clear();
   var storageArray = [];
+  var i = -1;
 
 
   // write to local storage from input when button save clicked
@@ -11,8 +12,7 @@ $(document).ready(function(){
   storageArray.push($('.text-entry').val())
   localStorage.setItem('inputFieldValue', storageArray)
   $('.list-display-field').text(storageArray);
-  $('.text-entry').val(placeholderValueQuestions[0]);
-  placeholderValueQuestions.slice(1);
+  $('.text-entry').val(createInputPrompts(placeholderValueQuestions))
 
   // having trouble looping through and pushing that loop into our placeholder value.
 
