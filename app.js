@@ -2,7 +2,7 @@ $(document).ready(function(){
   console.log('jQuery loaded');
   localStorage.clear();
   var storageArray = [];
-  var i = -1;
+
 
 
   // write to local storage from input when button save clicked
@@ -13,21 +13,23 @@ $(document).ready(function(){
   localStorage.setItem('inputFieldValue', storageArray)
   $('.list-display-field').text(storageArray);
   $('.text-entry').val(createInputPrompts(placeholderValueQuestions))
-
-  // having trouble looping through and pushing that loop into our placeholder value.
-
-  //line above will be used to clear out previous search and add new placeholder with instructions for next user input.
-
   });
+
   //button to undo previous input
   $(".btn-undo").on('click', function(){
     storageArray = storageArray.splice(0, storageArray.length-1);
     localStorage.setItem('inputFieldValue', storageArray)
   })
+
+
   // delete from local storage when delete button clicked
   $('.btn-delete').on('click', function(){
     $('.list-display-field').html('');
     localStorage.clear();
   });
+
+  $('.btn-schedule').on('click', function(){
+    $('.list-display-field').text(scheduler(storageArray))
+  })
 
 });
