@@ -4,7 +4,6 @@ $(document).ready(function(){
   var storageArray = [];
 
 
-
   // write to local storage from input when button save clicked
   //save in array to access all inputs
   $('.btn-submit').on('click', function(){
@@ -12,9 +11,12 @@ $(document).ready(function(){
   storageArray.push($('.text-entry').val())
   localStorage.setItem('inputFieldValue', storageArray)
   $('.list-display-field').text(storageArray);
-  $('.text-entry').val('Is this working')
+  $('.text-entry').val(placeholderValueQuestions[0]);
+  placeholderValueQuestions.slice(1);
+
+  // having trouble looping through and pushing that loop into our placeholder value.
+
   //line above will be used to clear out previous search and add new placeholder with instructions for next user input.
-  console.log(event)
 
   });
   //button to undo previous input

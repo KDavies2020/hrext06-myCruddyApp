@@ -1,3 +1,6 @@
+
+
+// not sure if this is working yet. need to write function that will change placeholder first so that I can input correct data.
 var placeholderValueQuestions = ["Your team name","Home or Away?", "Date of game (DD/MM)", "Time of game (ex. 9:30 AM)", "Location", "Opponent name"];
 
 var scheduler = function(array){
@@ -13,4 +16,16 @@ var scheduler = function(array){
   } else {
     return `Away game on ${date} scheduled for ${time} at ${location}. ${teamName} @ ${opponent}.`
   }
+}
+
+
+// upon clicked submit game - we need to pass our storageArray into scheduler function.
+
+// second function that will change our placeholder / input value to the element of our placeholderValueQuestions array.
+
+var createInputPropmts = function(array){
+  index = 0;
+  return array[index];
+  index++
+
 }
