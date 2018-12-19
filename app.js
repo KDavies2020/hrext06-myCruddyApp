@@ -11,7 +11,7 @@ $(document).ready(function(){
 
   storageArray.push($('.text-entry').val())
   localStorage.setItem('inputFieldValue', storageArray)
-  $('.list-display-field').text(storageArray);
+  //$('.list-display-field').text(storageArray);
   $('.text-entry').val(createInputPrompts(placeholderValueQuestions))
   });
 
@@ -30,6 +30,9 @@ $(document).ready(function(){
 
   $('.btn-schedule').on('click', function(){
     $('.list-display-field').text(scheduler(storageArray))
+    $('.text-entry').val('');
+
+
   })
 
 });
