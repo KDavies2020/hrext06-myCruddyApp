@@ -17,6 +17,9 @@ $(document).ready(function(){
   $(".btn-undo").on('click', function(){
     storageArray = storageArray.splice(0, storageArray.length-1);
     localStorage.setItem('inputFieldValue', storageArray);
+    console.log($('.text-entry').val());
+    $('.text-entry').val(placeholderValueQuestions[i-1])
+    i--;
 
   })
 
@@ -24,6 +27,7 @@ $(document).ready(function(){
   // delete from local storage when delete button clicked
   $('.btn-delete').on('click', function(){
     $('.list-display-field').html('');
+    $('.score-tracker').html(0)
     localStorage.clear();
   });
   //when we are done with inputs, our schedule button will clear the holder text in the display field, and display newly scheduled games.
@@ -31,7 +35,7 @@ $(document).ready(function(){
     $('.list-display-field').text('')
   })
   $('.btn-schedule').on('click', function(){
-    $('.list-display-field').prepend(`<div class = "scheduled-game" style = "color: blue">
+    $('.list-display-field').prepend(`<div class = "scheduled-game" style = "color: black">
     ${scheduler(storageArray)} </div>`, '<button class = "won">Big Win!</button>', '<button class = "draw">We Tied!</button>', '<button class = "loss">Tough Loss!</button>' );
     $('.text-entry').val(placeholderValueQuestions[0]);
     i = 0;

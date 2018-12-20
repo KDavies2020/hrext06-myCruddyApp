@@ -53,13 +53,13 @@ height: 46px;
   border-style: groove;
  border-color: red;
  border-width: 2px;
+ background-color: pink;
 }
 
 
 .btn-schedule{
 height: 46px;
   width: 130px;
-  background-color: pink;
   margin-left: 10px;
   font-size: 15px;
    border-style: groove;
@@ -137,7 +137,7 @@ height: 46px;
     min-height: 50px;
     width: 100%;
     color: black;
-    font-size: 20px;
+    font-size: 25px;
 
   }
 
