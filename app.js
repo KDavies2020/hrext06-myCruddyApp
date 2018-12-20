@@ -7,7 +7,7 @@ $(document).ready(function(){
 
   // write to local storage from input when button save clicked
   //save in array to access all inputs
-  $('.btn-submit').on('click', function(){
+  $('.btn-next').on('click', function(){
   storageArray.push($('.text-entry').val())
   localStorage.setItem('inputFieldValue', storageArray)
   $('.text-entry').val(createInputPrompts(placeholderValueQuestions))
@@ -31,8 +31,8 @@ $(document).ready(function(){
     $('.list-display-field').text('')
   })
   $('.btn-schedule').on('click', function(){
-    $('.list-display-field').append(`<div class = "scheduled-game" style = "color: blue">
-    ${scheduler(storageArray)} </div>`);
+    $('.list-display-field').prepend(`<div class = "scheduled-game" style = "color: blue">
+    ${scheduler(storageArray)} </div>`, '<button class = "won">Big Win!</button>', '<button class = "draw">We Tied!</button>', '<button class = "loss">Tough Loss!</button>' );
     $('.text-entry').val(placeholderValueQuestions[0]);
     i = 0;
   })
@@ -45,5 +45,21 @@ $(document).ready(function(){
 
 
 
+
+  $(function() {
+      $('.list-display-field').on('click','.won',function(){
+        //console.log($('.count').html)
+      $('.score-tracker').html(function(index,counter){return +counter +3})
+      })
+
+  });
+
+  $(function() {
+      $('.list-display-field').on('click', '.draw', function(){
+        //console.log($('.count').html)
+      $('.score-tracker').html(function(index,counter){return +counter +1})
+      })
+
+  });
 
 });

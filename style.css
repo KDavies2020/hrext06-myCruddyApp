@@ -1,37 +1,69 @@
+body{
+  background-image: url('https://www.bigactivities.com/coloring/sports/soccer/images/soccer_ball.png');
+   background-color: #D2FFE8;
+  background-blend-mode: screen;
+}
+
 .input-and-button-box{
- display: inline-block;
- justify-content: center;
+ display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
  margin-top: 45px
 
 }
 .text-entry {
  height: 35px;
  font-size:20px;
+ border-style: groove;
+ border-color: red;
 
 }
 
 
-.btn-submit{
-  height: 25px;
+.btn-next{
+  height: 41px;
   width: 125px;
+  margin-left: 10px;
+  font-size: 15px;
+  border-style: groove;
+ border-color: red;
+ border-width: 2px;
 }
 
 
 .btn-undo{
-height: 25px;
+height: 41px;
   width: 125px;
+  background-color: pink;
+  margin-left: 10px;
+  font-size: 15px;
+  border-style: groove;
+ border-color: red;
+ border-width: 2px;
 }
 
 
 .btn-delete{
-height: 25px;
+height: 41px;
   width: 125px;
+  margin-left: 10px;
+  font-size: 15px;
+  border-style: groove;
+ border-color: red;
+ border-width: 2px;
 }
 
 
 .btn-schedule{
-height: 25px;
+height: 41px;
   width: 125px;
+  background-color: pink;
+  margin-left: 10px;
+  font-size: 15px;
+   border-style: groove;
+ border-color: red;
+ border-width: 2px;
   }
 
   .score-tracker{
@@ -41,32 +73,44 @@ height: 25px;
     text-align: center;
     margin-top: 45px;
     color: blue;
-    font-size: 50px;
+    font-size: 85px;
   }
 
   .won{
     background-color: green;
     color: white;
-    width: 100px;
+    width: 115px;
+    height: 75px;
     font-size: 15px;
     margin-right: 25px;
+    border-radius: 50%;
+    border-style: dashed;
+    border-width: 3px;
 
   }
 
   .loss{
     background-color: red;
     color: white;
-    width: 100px;
+    width: 115px;
+    height: 75px;
     font-size: 15px;
     margin-left: 25px;
     margin-right: 25px;
+    border-radius: 50%;
+    border-style: dashed;
+    border-width: 3px;
   }
 
   .draw{
     background-color: yellow;
     color: blue;
-    width: 100px;
+    width: 115px;
+    height: 75px;
     font-size: 15px;
+    border-radius: 50%;
+    border-style: dashed;
+    border-width: 3px;
 
 
   }
@@ -79,8 +123,16 @@ height: 25px;
     flex-wrap: wrap;
     text-align: center;
     min-height: 50px;
-    width: 1200px;
-    color: red;
+    width: 100%;
+    color: black;
     font-size: 20px;
+
+  }
+
+  .adjust-score-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
 
