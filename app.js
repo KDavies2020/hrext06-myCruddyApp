@@ -36,7 +36,7 @@ $(document).ready(function(){
   })
   $('.btn-schedule').on('click', function(){
     $('.list-display-field').prepend(`<div class = "scheduled-game" style = "color: black">
-    ${scheduler(storageArray)} </div>`, '<button class = "won">Big Win!</button>', '<button class = "draw">We Tied!</button>', '<button class = "loss">Tough Loss!</button>' );
+    ${scheduler(storageArray)} </div>`,"<br/>", '<button class = "won">Big Win!</button>', '<button class = "draw">We Tied!</button>', '<button class = "loss">Tough Loss!</button>' );
     $('.text-entry').val(placeholderValueQuestions[0]);
     i = 0;
   })
