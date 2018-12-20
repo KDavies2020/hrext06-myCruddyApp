@@ -11,9 +11,9 @@ var scheduler = function(array){
   var opponent = array[5];
 
   if(homeOrAway === 'Home' || homeOrAway === 'home'){
-    return `Home game on ${date} scheduled for ${time} at ${location}. ${teamName} vs. ${opponent}.` + '/n'
+    return `Home game on ${date} scheduled for ${time} at ${location}. ${teamName} vs. ${opponent}.`
   } else {
-    return `Away game on ${date} scheduled for ${time} at ${location}. ${teamName} @ ${opponent}.` + '/n'
+    return `Away game on ${date} scheduled for ${time} at ${location}. ${teamName} @ ${opponent}.`
   }
 }
 

@@ -1,23 +1,62 @@
-#text-entry {
+.input-and-button-box{
+ display: inline-block;
+ justify-content: center;
+ margin-top: 45px
+
+}
+.text-entry {
+ height: 35px;
+ font-size:20px;
 
 }
 
-#btn-submit{
 
+.btn-submit{
+  height: 25px;
+  width: 125px;
 }
 
-#btn-undo{
 
+.btn-undo{
+height: 25px;
+  width: 125px;
 }
 
-#btn-delete{
 
+.btn-delete{
+height: 25px;
+  width: 125px;
 }
-  #btn-schedule{
 
+
+.btn-schedule{
+height: 25px;
+  width: 125px;
   }
 
-  #list-display-field{
-    display: inline-block;
+  .score-tracker{
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    color: blue;
+    font-size: 50px;
+  }
+
+
+  .list-display-field{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    min-height: 50px;
+    width: 900px;
+    color: red;
+  }
+
+
+  .scheduled-game{
+    color: #4097632;
 
   }

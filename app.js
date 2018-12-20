@@ -31,7 +31,8 @@ $(document).ready(function(){
     $('.list-display-field').text('')
   })
   $('.btn-schedule').on('click', function(){
-    $('.list-display-field').append(`<div class = "scheduled-game">${scheduler(storageArray)} </div>`)
+    $('.list-display-field').append(`<div class = "scheduled-game">
+    ${scheduler(storageArray)} </div>`);
     $('.text-entry').val(placeholderValueQuestions[0]);
     i = 0;
   })
