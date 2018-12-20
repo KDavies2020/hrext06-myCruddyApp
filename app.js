@@ -5,7 +5,6 @@ $(document).ready(function(){
   $('.text-entry').val(placeholderValueQuestions[0]);
 
 
-
   // write to local storage from input when button save clicked
   //save in array to access all inputs
   $('.btn-submit').on('click', function(){
@@ -17,7 +16,8 @@ $(document).ready(function(){
   //button to undo previous input
   $(".btn-undo").on('click', function(){
     storageArray = storageArray.splice(0, storageArray.length-1);
-    localStorage.setItem('inputFieldValue', storageArray)
+    localStorage.setItem('inputFieldValue', storageArray);
+
   })
 
 
@@ -31,7 +31,7 @@ $(document).ready(function(){
     $('.list-display-field').text('')
   })
   $('.btn-schedule').on('click', function(){
-    $('.list-display-field').append(`<div class = "scheduled-game">
+    $('.list-display-field').append(`<div class = "scheduled-game" style = "color: blue">
     ${scheduler(storageArray)} </div>`);
     $('.text-entry').val(placeholderValueQuestions[0]);
     i = 0;
@@ -41,6 +41,8 @@ $(document).ready(function(){
   $('.text-entry').on('click', function(){
     $('.text-entry').val('')
   })
+
+
 
 
 

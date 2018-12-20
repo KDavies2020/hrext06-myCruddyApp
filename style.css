@@ -39,24 +39,48 @@ height: 25px;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    margin: 0 auto;
+    margin-top: 45px;
     color: blue;
     font-size: 50px;
   }
 
+  .won{
+    background-color: green;
+    color: white;
+    width: 100px;
+    font-size: 15px;
+    margin-right: 25px;
+
+  }
+
+  .loss{
+    background-color: red;
+    color: white;
+    width: 100px;
+    font-size: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .draw{
+    background-color: yellow;
+    color: blue;
+    width: 100px;
+    font-size: 15px;
+
+
+  }
+
 
   .list-display-field{
+    margin-top:40px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     text-align: center;
     min-height: 50px;
-    width: 900px;
+    width: 1200px;
     color: red;
+    font-size: 20px;
   }
 
-
-  .scheduled-game{
-    color: #4097632;
-
-  }
