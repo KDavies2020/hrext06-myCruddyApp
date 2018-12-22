@@ -1,6 +1,6 @@
 var i = 0;
 
-var placeholderValueQuestions = ["Your team name","Home or Away?", "Date of game (MM/DD)", "Time of game (ex. 9:30 AM)", "Location", "Opponent name"];
+var placeholderValueQuestions = ["Your team name","Home or Away?", "Date of game (MM/DD/YYYY)", "Time of game (ex. 9:30 AM)", "Location", "Opponent name"];
 
 var scheduler = function(array){
   var teamName = array[0];

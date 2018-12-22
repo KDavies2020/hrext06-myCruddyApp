@@ -4,6 +4,7 @@ body{
   background-blend-mode: screen;
 }
 
+
 .input-and-button-box{
  display: flex;
     flex-wrap: wrap;
@@ -18,8 +19,9 @@ body{
  font-size:20px;
  border-style: groove;
  border-color: red;
-
+ text-align: center;
 }
+
 
 
 .btn-next{
@@ -30,6 +32,9 @@ body{
   border-style: groove;
  border-color: red;
  border-width: 2px;
+  border-radius: 20%;
+ background-color: pink;
+
 }
 
 
@@ -42,6 +47,7 @@ height: 46px;
   border-style: groove;
  border-color: red;
  border-width: 2px;
+ border-radius: 20%
 }
 
 
@@ -54,6 +60,7 @@ height: 46px;
  border-color: red;
  border-width: 2px;
  background-color: pink;
+ border-radius: 20%
 }
 
 
@@ -65,6 +72,8 @@ height: 46px;
    border-style: groove;
  border-color: red;
  border-width: 2px;
+  border-radius: 20%;
+ background-color: pink;
   }
 
   .score-text{
@@ -130,8 +139,8 @@ height: 46px;
 
   .list-display-field{
     margin-top:40px;
-    display: flex;
-    justify-content: flex-start;
+    display: block;
+    margin: 0 auto;
     flex-wrap: wrap;
     text-align: center;
     min-height: 50px;

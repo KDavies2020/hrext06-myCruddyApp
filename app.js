@@ -5,6 +5,7 @@ $(document).ready(function(){
   $('.text-entry').val(placeholderValueQuestions[0]);
 
 
+
   // write to local storage from input when button save clicked
   //save in array to access all inputs
   $('.btn-next').on('click', function(){
@@ -35,9 +36,10 @@ $(document).ready(function(){
     $('.list-display-field').text('')
   })
   $('.btn-schedule').on('click', function(){
-    $('.list-display-field').prepend(`<div class = "scheduled-game" style = "color: black">
-    ${scheduler(storageArray)} </div>`,"<br/>", '<button class = "won">Big Win!</button>', '<button class = "draw">We Tied!</button>', '<button class = "loss">Tough Loss!</button>' );
+    $('.list-display-field').append(`<div class = "scheduled-game" style = "color: black">
+    ${scheduler(storageArray)} </div>`,'<br/>', '<button class = "won">Big Win!</button>', '<button class = "draw">We Tied!</button>', '<button class = "loss">Tough Loss!</button>' );
     $('.text-entry').val(placeholderValueQuestions[0]);
+    storageArray = [];
     i = 0;
   })
 
